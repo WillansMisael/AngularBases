@@ -1,2 +1,6 @@
-<input type="text" [(ngModel)]="title">
-{{ title }}
+<input type="text" [(ngModel)]="role">
+{{ role }}
+
+<div *ngIf="role === 'admin'">
+    Usted es  {{ role }}
+</div>
