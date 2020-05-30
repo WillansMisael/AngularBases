@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   role = 'admin';
+
+  roles = ['admin', 'user', 'view'];
+
+  addItem(){
+    this.roles.push(this.role);
+  }
+  deleteItem(index: number){
+    this.roles.splice(index, 1);
+  }
 }

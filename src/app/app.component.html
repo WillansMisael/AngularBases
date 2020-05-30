@@ -1,6 +1,18 @@
 <input type="text" [(ngModel)]="role">
 {{ role }}
 
-<div *ngIf="role === 'admin'">
-    Usted es  {{ role }}
+<div *ngIf="role === ''">
+  Vacio  {{ role }}
 </div>
+
+<button (click)="addItem()">
+    add role
+</button>
+
+<ul>
+    <li *ngIf="roles.length === 0">la lista esta vacia</li>
+    <li *ngFor="let role of roles; index as i">
+        {{ role }} {{ i }}
+        <button (click)="deleteItem(i)"> Delete</button>
+    </li>
+</ul>
